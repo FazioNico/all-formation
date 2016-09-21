@@ -1,27 +1,24 @@
 // Exo 1
 
-let a = 2011;
-let b = '5';
-let debuggerTest1 = document.getElementsByClassName('debuggerTest1')[0];
-debuggerTest1.innerHTML = '<h1>'+a+b+'</h1>';
-console.log( 'Exo1: résoudre bug de calcule');
+console.info( 'Exo1: résoudre bug de calcule => but: aditionner a+b');
+var a = 2011;
+var b = '5';
+console.log('<h1>'+a+b+'</h1>')
 
 // Exo 2
-let debuggerTest2 = document.getElementsByClassName('debuggerTest2')[0];
-let variable = 'Hello world!'
-debuggerTest2.innerHTML = '<h1>'+'variable'+'<br> Welcome in Chrome DevTools!'+'</h1>';
-console.log( `Exo2: résoudre bug d'affichage`);
-// Exo 3
-class DebuggerTest{
-  constructor(){
-    this.title = 'Yeah! Javascript is cool!';
-  }
-  displayTitle(){
+console.info( `Exo2: résoudre bug d'affichage => but: remplacer 'text' par le contenu de la variable text`);
+var text = 'Hello world!'
+console.log('<h1>'+'text'+'<br> Welcome in Chrome DevTools!'+'</h1>');
 
-    setTimeout(function(){
-      let debuggerTest3 = document.getElementsByClassName('debuggerTest3')[0];
-      debuggerTest3.innerHTML = `<h1>${this.title}</h1>`
-      console.log( 'Exo3: bug avec this.title ->', this.title);
-    }, 100);
+// Exo 3
+console.info(`Exo3: résoudre bug de la function => elle trouve des element qui n'existe pas... trouver pourquoi et corriger `);
+function trouverElementDansTableau(tableau, valeur){
+  for (var i = 0; i < tableau.length; i++) {
+    if(tableau[i] = valeur){
+      return 'Trouvé! => ' + tableau[i]
+    }
+    else {
+      return 'Pas Trouvé!'
+    }
   }
 }

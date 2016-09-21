@@ -5,15 +5,15 @@
   <title>TP Debug &amp; Outil Dev</title>
 </head>
 <body>
-  <div class="debuggerTest1"></div>
-  <hr/>
-  <div class="debuggerTest2"></div>
-  <hr/>
-  <div class="debuggerTest3"></div>
+  <div id="debuggerTest1"></div>
+  <div id="debuggerTest2"></div>
+  <div id="debuggerTest3"></div>
+  
   <script type="text/javascript" src="./main.js"></script>
   <script>
-    let debuggerTest = new DebuggerTest();
-    debuggerTest.displayTitle()
+    var array = ['courgettes', 'tomates', 'pommes', 'poires', 'cerises']
+    var  result = trouverElementDansTableau(array,'chocolat');
+    console.log(result)
   </script>
 </body>
 </html>
