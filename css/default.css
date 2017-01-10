@@ -1,0 +1,34 @@
+.title {
+  font-size: 25rem!important;
+  font-weight: 600!important;
+  margin: 0px!important;
+  padding: 0px !important;
+  line-height: 20rem!important;
+}
+h1, h2, h5, h6 {
+  font-weight: 600!important;
+}
+h3, h4 {
+  font-weight: 100!important;
+  font-size:90%!important;
+}
+
+p,ul {
+  /*margin:0px 0px 80px 0px!important;*/
+  font-size:1.5rem!important;
+}
+.text-white {
+  color:#fff!important;
+}
+.text-left {
+  text-align: left;
+}
+.reveal section img {
+  background: transparent;
+  border:0px;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  font-size: 0.9rem !important;
+}

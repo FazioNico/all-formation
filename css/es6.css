@@ -1,0 +1,10 @@
+
+.section-js h1, .section-js h2, .section-js h3, .section-js h4 {
+  color: #f0db4f!important;
+}
+.section-node h1, .section-node h2, .section-node h3, .section-node h4 {
+  color: #8cc84b!important;
+}
+.section-gulp h1, .section-gulp h2, .section-gulp h3, .section-gulp h4 {
+  color: #eb4a4b!important;
+}
