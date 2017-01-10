@@ -11,13 +11,14 @@ Nomades Advenced Technologies.
 - Formation Git :  [Slides](https://fazionico.github.io/all-formation/slides-git-formation.html#/)
 - Formation ES6 :  [Slides](https://fazionico.github.io/all-formation/slides-formation-es6.html#/) | [PDF](https://fazionico.github.io/all-formation/pdf/pdf-formation-es6.pdf) | [TP ES6](https://github.com/FazioNico/cours-es6)
 - Formation Typescript :  [Slides](https://fazionico.github.io/all-formation/slides-introduction-typescript.html) | [TP Typescript](https://github.com/FazioNico/simple-ts-front-end-stack)
+- Formation Ionic 2 : [Build Application Workflow](https://github.com/FazioNico/elevator-app)
 
 ## Utilisation
 - Press `space` pour faire défiller les slides
 - Tu peux aussi utiliser les flêches du clavier
 - Press `o` pour afficher l'ensemble des slides
 - Press `f` pour activer le mode plein ecran
-- Ajout `?print-pdf#/` à la fin de l'url (juste après le `.html`) pour imprimer un PDF 
+- Ajout `?print-pdf#/` à la fin de l'url (juste après le `.html`) pour imprimer un PDF
 
 
 ## Autheur
