@@ -4,7 +4,7 @@
   "description": "Formation pour Nomades Advenced Technologies à Genève",
   "main": "README.md",
   "scripts": {
-    "deploy": "gh-pages -d reveal.js",
+    "deploy": "gh-pages -d revealjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

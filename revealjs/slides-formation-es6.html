@@ -1,0 +1,1237 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   09-01-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 10-01-2017
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>[Formation] ES6 - Modules / Prod &amp; Dev Workflow: Slides</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/es6.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background-color="#f0db4f">
+						<h1 class="title">
+							JS
+						</h1>
+						<br>
+						<h2>ECMA SCRIPT 6</h2>
+						<h3>MODULES DEVELOPPEMENT & PRODUCTION WORKFLOW</h3>
+						<p>
+							<small>Nicolas Fazio <br><a href="http://twitter.com/FazioNico">@FazioNico</a></small>
+						</p>
+				</section>
+
+				<section class="text-left section-js" >
+						<h2>PRÉSENTATION DE LA FORMATION</h2>
+						<div>
+							<p>Jour 1</p>
+							<ul>
+								<li>Utilisation des Classes ES6</li>
+							</ul>
+							<p>Jour 2</p>
+							<ul>
+								<li>Présentation de la syntaxe et utilisation des modules ES6</li>
+								<li>Comment organiser et hiérarchiser son application et de son code</li>
+							</ul>
+							<p>Jour 3</p>
+							<ul>
+								<li>Découverte et utilisation des outils de développement.</li>
+							</ul>
+							<p>Jour 4-5</p>
+							<ul>
+								<li>Mise en production d'une application Javascript ES6</li>
+							</ul>
+						</div>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section class="section-js">
+					<section data-background-color="#222">
+							<p>
+								<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+							</p>
+							<br>
+							<h3>Jour 1</h3>
+							<h2>LES CLASSES</h2>
+					</section>
+					<section>
+						<h2>UTILISATION DES CLASSES</h2>
+						<p>Les classes JavaScript ont été introduites avec ECMAScript 6. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple et plus claire pour créer des objets et manipuler l'héritage.</p>
+						<br>
+						<p>
+								resources:
+								<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes">
+									https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
+								</a>
+						</p>
+					</section>
+					<section>
+								<h2>CLASS DEFINITION</h2>
+<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+
+class MaClass {
+
+	constructor(){
+		this.title = 'Hello MaClass'
+		this.maMethode()
+	}
+
+	maMethode(){
+		console.log(`<h1>${this.title}</h1>`)
+	}
+
+}
+let maClass = new MaClass()
+
+</code></pre>
+								<p>resources: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes</p>
+
+					</section>
+				</section>
+
+				<section class="section-js">
+					<h2>TP</h2>
+					<p>
+						step1 + step2 + step3 <br>
+						<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+					</p>
+				</section>
+
+				<section class="section-js">
+						<section data-background-color="#222">
+							<p>
+								<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+							</p>
+							<br>
+							<h3>Jour 2</h3>
+							<h2>LES MODULES</h2>
+					</section>
+
+					<section>
+						<h2>PRÉSENTATION DU SYSTEME DE MODULES ES6</h2>
+						<br>
+						<p>
+							Les modules permettent d'encapsuler du code JS dans un package ou namespace tout en permettant si besoin, un accès extérieur à certaines propriétés ou fonctions.
+						</p>
+						<p>
+							Un module ES6 est un fichier contenant du code JavaScript.
+							Il n’y a pas de mot-clé spécifique module et un module est lu comme un script.
+						</p>
+						<br>
+						<p>
+							resources: <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">https://hacks.mozilla.org/2015/08/es6-in-depth-modules/</a>
+						</p>
+					</section>
+
+					<section>
+						<h2>SYNTAXE DES MODULES ES6</h2>
+						<br>
+						<p>
+							<b>import</b> et <b>export</b>
+						</p>
+						<p>
+							L'utilisation des modules se fait avec les fonctions import et export.
+						</p>
+						<br>
+						<p>
+							resources: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/export">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/export</a> <br>
+							<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/import">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/import</a>
+						</p>
+					</section>
+
+					<section>
+							<h2>EXPORT</h2>
+							<br>
+							<p>
+								Définition d'un module ES6 exportable
+							</p>
+<pre><code class="javascript" data-trim  style="font-size: 18px;">
+// date.lib.js
+
+export const today = New Date()
+
+export function shortDate() {
+	return  today.getDate() + '/' +
+		today.getMonth() + 1  + '/' +
+		today.getFullYear()
+}
+</code></pre>
+					</section>
+
+					<section>
+							<h2>IMPORT</h2>
+							<br>
+							<p>
+								Utilisation d'un module ES6 exportable
+							</p>
+<pre><code class="javascript" data-trim  style="font-size: 18px;">
+	import { today, shortDate } from './date.lib.js';
+
+	console.log(today)         // Mon Sep 12 2016 09:11:23
+	console.log(shortDate())   // 12/09/2016
+</code></pre>
+					</section>
+
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+							<p>
+								<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+							</p>
+							<br>
+							<h3>Jour 2 (suite)</h3>
+							<h2>STRUCTURE D'UNE APPLICATION</h2>
+					</section>
+
+					<section>
+						<h2>COMMENT ORGANISER ET HIÉRARCHISER SON APPLICATION ET DE SON CODE</h2>
+						<br/>
+						<ul>
+							<li>
+								Création d'un environnement de développement
+							</li>
+							<li>
+								Séparation des fichiers d'application et de templates
+							</li>
+							<li>
+								Organisation des modules
+							</li>
+							<li>
+								Création d'un répertoire de production
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>POURQUOI?</h2>
+						<br>
+						<p>
+							Vous avez certainement déjà codé en JS et votre application est généralement créer et déclarée dans un seul fichier.
+						</p>
+						<p>
+							Cela ne pose pas vraiment de problème pour une petite application, mais comment allez vous faire pour maintenir une application comme votre travail de projet, dont le code peut contenir plus de 2000 lignes ? Comment retrouver facilement et rapidement les classes, methodes, events, fonctions etc...
+						</p>
+						<p>
+							C'est là qu'intervient la séparation des fichiers !
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							ENVIRONNEMENT DE DÉVELOPPEMENT
+						</h2>
+						<br>
+						<p>
+							Zone de développement de l'application.
+							C'est uniquement dans cette endroit que vous aller coder.
+						</p>
+						<p>
+							On organise cette zone en différentes sections:
+						</p>
+						<p>
+							<b>app</b> (core) <br>
+							<b>src</b> (ressources) <br>
+							<b>www</b> (fichiers statiques)	<br>
+						</p>
+					</section>
+
+					<section>
+						<h2>DOSSIER APP</h2>
+						<p>Contient tous les fichiers JS de l'application.</p>
+<pre><code class="javascript" data-trim  style="font-size: 18px;">
+
+dev
+├── app
+     ├── app.js
+     ├── pages
+     │   ├── my-module
+     │       ├── class.js
+     │       ├── class.ui.js
+     ├── components
+     │   ├── my-module
+     │       ├── class.js
+     │       ├── class.ui.js
+     ├── providers
+         ├── my-module
+             ├── class.js
+
+</code></pre>
+					</section>
+
+					<section>
+						<h2>DOSSIER SRC</h2>
+						<p>Contient toutes les ressources de l'application.</p>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+dev
+  ├── src
+      ├── bower_components
+      │   ├── jquery
+      │   │     ├── jquery.min.js
+      ├── css
+      │   ├── style.css
+      ├── img
+          ├── img1.png
+          ├── img2.png
+
+</code></pre>
+					</section>
+
+					<section>
+						<h2>DOSSIER WWW</h2>
+						<p>Contient tous les fichiers statiques de l'application.</p>
+<pre><code class="javascript" data-trim  style="font-size: 18px;">
+dev
+  ├── www
+      ├── index.html
+
+</code></pre>
+					</section>
+				<section>
+						<h2>RÉPERTOIRE DEV COMPLET</h2>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+dev
+  ├── app
+  │   ├── app.js
+  │   ├── pages
+  │   │   ├── my-module
+  │   │       ├── class.js
+  │   │       ├── class.ui.js
+  │   ├── components
+  │   │   ├── my-module
+  │   │       ├── class.js
+  │   │       ├── class.ui.js
+  │   ├── providers
+  │   │   ├── my-module
+  │   │       ├── class.js
+  ├── src
+  │   ├── bower_components
+  │   │   ├── jquery
+  │   │         ├── jquery.min.js
+  │   ├── css
+  │   ├── img
+  │       ├── img1.png
+  │       ├── img2.png
+  ├── www
+      ├── index.html
+
+</code></pre>
+					</section>
+
+					<section>
+						<h2>ZOOM SUR LE FICHIER DEV/APP.JS</h2>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+// dev/app.js
+
+import { HomePage } from './pages/home/home.js';
+
+class MyApp {
+
+  constructor(){
+    this.appBody = document.getElementsByTagName("app")[0];
+  }
+
+  start(){
+    // init HomePage
+    let homePage = new HomePage(this.appBody);
+  }
+
+}
+let app = New MyApp()
+app.start();
+</code></pre>
+					</section>
+
+					<section>
+						<h2>ZOOM SUR LE FICHIER DEV/APP/PAGES/HOME/HOME.JS</h2>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+ // dev/app/pages/home/home.js
+
+ export class HomePage {
+
+   constructor(appBody){
+     this.appBody = appBody
+     this.pageTitle = 'Hello world!';
+     this.initUI();
+   }
+
+   initUI(){
+     // remove all section before display UI
+     if(document.getElementsByTagName("section")[0]){
+       document.getElementsByTagName("section")[0]
+       .parentNode.removeChild(document.getElementsByTagName("section")[0])
+     }
+     // create page skeleton
+     let pageSkeleton = `
+       < section>
+         <h1>${this.pageTitle}</h1>
+       < /section>`;
+     // add page skeleton in body
+     this.appBody.insertAdjacentHTML( 'afterbegin', pageSkeleton )
+   }
+ }
+</code></pre>
+					</section>
+
+					<section>
+						<h2>SÉPARER HTML ET JS</h2>
+						<p>
+							Il est possible de séparer le HTML de votre code JS. <br>
+							Cela permet une meilleures organisation et facilite le travail.
+						</p>
+					</section>
+
+					<section>
+						<h2>SÉPARER HTML ET JS DEV/APP/PAGES/HOME/HOME.JS</h2>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+// dev/app/pages/home/home.js
+import {homeSkeleton} from "./home-ui";
+export class HomePage {
+
+  constructor(appBody){
+  	this.appBody = appBody
+  	this.pageTitle = 'Hello world!';
+  	this.initUI();
+  }
+  initUI(){
+  	// remove all section before display UI
+  	if(document.getElementsByTagName("section")[0]){
+  	  document.getElementsByTagName("section")[0]
+  	  .parentNode.removeChild(document.getElementsByTagName("section")[0])
+  	}
+  	// create page skeleton
+  	let pageSkeleton = this.getPageSkeleton();
+  	// add page skeleton in body
+  	this.appBody.insertAdjacentHTML( 'afterbegin', pageSkeleton )
+  }
+
+  getPageSkeleton(){
+	// return page skeleton
+	let data = {}; // create obj to pass data
+	data.pageTitle = this.pageTitle // asigne data
+	return  homeSkeleton(data);
+  }
+}
+
+</code></pre>
+					</section>
+
+					<section>
+
+						<h2>SÉPARER HTML ET JS DEV/APP/PAGES/HOME/HOME-UI.JS</h2>
+<pre><code class="javascript" data-trim style="font-size: 18px;">
+// dev/app/pages/home/home-ui.js
+
+export function homeSkeleton(data){
+	// return page skeleton
+	return  `
+		< section class="container">
+			<h1>${data.pageTitle}</h1>
+		< /section>
+	`;
+}
+</code></pre>
+					</section>
+
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<h2>TP</h2>
+						<p>
+							step4 <br>
+							séparer les classes du projet en plusieurs <br>fichiers et les organiser correctement <br>
+							<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+						</p>
+					</section>
+
+					<section data-background-color="#222">
+						<h3>TESTER L'APPLICATION SUR CHROME...</h3>
+					</section>
+					<section data-background-color="#222">
+						<h3>SUR FIREFOX...</h3>
+					</section>
+					<section data-background-color="#222">
+						<h3>ET SUR SAFARI...</h3>
+					</section data-background-color="#222">
+					<section data-background-color="#222">
+						<h3>MAIS POURQUOI CELA NE FONCTIONNE PAS?</h3>
+					</section>
+					<section data-background-color="#fff">
+						<h2>RAPPEL</h2>
+						<br>
+						<p>
+							Les fonctionnalités d'Es6 ne sont pas encore complètement implémentée  dans les navigateurs actuel <br>:-(
+						</p>
+						<p>
+							Il vas donc devoir trouver une solution pour débugger l'application...
+						</p>
+						<br>
+						<p>
+							<b>Solution 1:</b> oublier la séparation des fichier <br>
+							<b>Solution 2: </b>Transformer tout notre code Es6 en Es5
+						</p>
+
+					</section>
+					<section data-background-color="#fff">
+						<h2>NOTRE CHOIX</h2>
+						<br>
+						<h3>
+							SOLUTION 2: <br>
+							TRANSFORMER TOUT NOTRE CODE <br>ES6 EN ES5
+						</h3>
+						<br>
+						<p>
+							Mais comment faire? On vas pas tout réécrire non? <br>
+							En plus Es5 c'est dépassé! <br>
+							On utilise Es6 dans cette formation!!!!
+						</p>
+					</section>
+					<section data-background-color="#fff">
+						<h2>NOTRE CHOIX</h2>
+						<br>
+						<h3>
+							SOLUTION 2: <br>
+							TRANSFORMER TOUT NOTRE CODE <br>ES6 EN ES5
+						</h3>
+						<br>
+						<p>
+							<b>Pas de panique!!! </b> <br>
+							On vas coder en Es6 toute notre application! <br>
+							Mais on vas délivrer du code transformé en Es5 pour pouvoir <br>
+							utiliser toutes les fonctionnalités d'Es6. <br>
+							Et on vas rien réécrire!! <br>
+							On vas utiliser un super outil qui le fait pour nous.
+						</p>
+						<p>
+							:-)
+						</p>
+
+					</section>
+				</section>
+
+				<section class="section-node">
+					<section data-background-color="#222">
+						<p>
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003375/nodejs-logo.png" alt="">
+						</p>
+						<br>
+						<h3>Jour 3</h3>
+						<h2>INTRODUCTION <br>À NODE JS</h2>
+					</section>
+
+					<section>
+						<h2>
+							PRÉSENTATION DE NODE JS
+						</h2>
+						<br>
+						<p>
+							Node.js est un environnement d'assez bas niveau permettant d'exécuter du javascript non plus dans le navigateur web mais sur le serveur.
+						</p>
+						<p>
+							En effet, Node.js permet, au même titre que PHP ou Java, d'écrire des scripts qui vont vous permettre d'interagir avec les ressources de votre machine.
+						</p>
+						<br>
+						<p>
+							<a href="https://nodejs.org">https://nodejs.org</a>
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							PRÉSENTATION DE NODE JS
+						</h2>
+						<br>
+						<p>
+							<b>Nous allons utiliser Node.js uniquement pour concevoir un environnent de développement efficace et ordonné.</b>
+						</p>
+						<p>Nous n'irons pas plus loin dans l'utilisation de Node.js car ce n'est pas le sujet de cette formation.</p>
+					</section>
+
+					<section>
+						<h2>
+							PRÉSENTATION DE NODE JS
+						</h2>
+						<br>
+						<p>
+							Node.js va nous permettre d'installer des outils de développement qui vont grandement simplifier notre travail.
+						</p>
+						<p>
+							Ces outils se présentent sous forme de <b>module node.js</b>
+et nous allons devoir télécharger les modules dont nous aurons besoin pour concevoir notre environnement de développement.
+						</p>
+					</section>
+
+					<section>
+						<h2>INSTALLER NODE JS</h2>
+						<br>
+						<p>
+							<b>MAC OSX</b><br>
+							installer Node Version Manager (nvm) <br>
+							<a href="https://github.com/creationix/nvm">https://github.com/creationix/nvm</a>
+						</p>
+						<br>
+						<p>
+							<b>puis Node.js</b>
+						</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ nvm install node
+							</code>
+						</p>
+					</section>
+				</section>
+
+				<section class="section-node" data-background-color="#222">
+					<h2>TP</h2>
+					<p>
+						- Installer NVM <br>
+						- Installer Node.js
+					</p>
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<p>
+							<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003375/nodejs-logo.png" alt="">
+						</p>
+						<br>
+						<h2>ENVIRONEMENT DE DEVELOPPEMENT NODE.JS</h2>
+					</section>
+
+					<section>
+						<h2>DÉMARER NODE.JS</h2>
+						<br>
+						<p>
+							Node.js est et NVM sont maintenant installé sur votre machine. <br>
+							Vous pouvez dès présent utiliser NVM pour lancer Node avec la commande:
+						</p>
+						<br>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ nvm use 7
+							</code>
+						</p>
+					</section>
+
+					<section>
+						<h2>INITIALISER VOTRE PROJET</h2>
+						<br>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm init
+							</code>
+						</p>
+						<br>
+						<p>
+							Cette commande va générer un fichier package.json qui décrit la configuration de votre projet.
+						</p>
+						<p>
+							Chaque module de NPM est configuré ainsi, ce qui fait que votre projet est par définition un paquet au même titre que les autres et donc potentiellement publiable sur NPM
+						</p>
+					</section>
+
+					<section>
+						<h2>INITIALISER VOTRE PROJET</h2>
+						<p>
+							NPM est un gestionnaire de paquet. L’usage le plus courant que l’on en fait est l’installation de dépendances depuis la plateforme npm.
+						</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install <nom_du_paquet><br>
+							</code>
+						</p>
+						<p>ou</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install <nom_du_paquet> --save <br>
+							</code>
+						</p>
+						<p>ou</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install <nom_du_paquet> --save-dev
+							</code>
+						</p>
+						<br>
+						<p>Logique et simple, il en va de même pour la suppression :</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm uninstall <nom_du_paquet>
+							</code>
+						</p>
+					</section>
+				</section>
+
+				<section class="section-js" data-background-color="#222">
+					<h2>TP</h2>
+					<p>Step 5</p>
+					<p>
+						-initialiser votre projet avec NPM <br>
+						(utiliser le nom: '< your-name >-es6-training')
+					</p>
+					<p>
+						<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+					</p>
+				</section>
+
+				<section class="section-gulp">
+					<section data-background-color="#222">
+						<p>
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003369/gulp-2x.png" alt="">
+						</p>
+						<br>
+						<h2>INTRODUCTION GULP</h2>
+					</section>
+
+					<section>
+						<h2>GULP TASKS RUNNER</h2>
+						<br>
+						<p>
+							Gulp est un outil qui est spécialiser dans le lancement de tâches. <br>
+							C'est pour cela que l'on dit que Gulp est un Tasks Runner.
+						</p>
+						<p>
+							Gulp n'est pas capable de grand chose d'autres que de lancer des tâches préalablement déclarées et de passer d'une tâche à l'autres.
+						</p>
+						<p>
+							<a href="http://gulpjs.com">http://gulpjs.com</a>
+						</p>
+					</section>
+
+					<section>
+						<h2>GULP INSTALLATION</h2>
+						<br>
+						<p>
+							Gulp est un module NPM et est donc téléchargeable via votre CLI <br>
+							Installation sur votre machine:
+						</p>
+						<br>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install -g gulp
+							</code>
+						</p>
+					</section>
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<p>
+							<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003375/nodejs-logo.png" alt="">
+
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003369/gulp-2x.png" alt="">
+						</p>
+						<br>
+						<h2>ENVIRONEMENT DE DEVELOPPEMENT NODE.JS</h2>
+					</section>
+
+					<section>
+						<h2>INTRODUCTION</h2>
+						<br>
+						<p>
+							Maintenant que vous avez les outils installé sur votre machine, nous allons pouvoir commencer à monter notre <b>stack de développement</b>. <br>
+							C'est le terme à la mode pour designer les outils de travail d'un développeur Front-End.
+						</p>
+						<p>C'est partit!!</p>
+					</section>
+
+					<section>
+						<h2>AJOUTER LES DEPENCENCE GULP AU PROJET</h2>
+						<br>
+						<p>
+							Gulp à été installé en global sur votre machine mais vous devez aussi l'ajouter aux dépendances de votre projet afin que celui-ci puisse utiliser Gulp. <br>
+							<br>Voici la ligne de commande:
+						</p>
+						<br>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install --save-dev gulp gulp-util
+							</code>
+						</p>
+						<br>
+						<p>
+							On profite pour installer aussi gulp-util qui est l'utilitaire de Gulp.
+						</p>
+					</section>
+
+					<section>
+						<h2>AJOUTER LES DEPENCENCE GULP AU PROJET</h2>
+						<p>
+							Il faut maintenant ajouter un fichier de configuration pour Gulp. <br>
+C'est dans ce fichier que nous allons créer nos diverses tâches.
+						</p>
+						<p>
+							Dans votre CLI à la racine de votre projet:
+						</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ touch gulpfile.js
+							</code>
+						</p>
+						<p>
+							Ensuite, ouvrez le fichier gulpfile.js et y ajouter:
+						</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								var gulp = require('gulp');
+							</code>
+						</p>
+						<br>
+						<p>
+							Cela permet d'importer Gulp dans notre fichier de configuration.
+						</p>
+					</section>
+
+					<section class="text-left">
+						<h2>UTILISER GULP AVEC SON PROJET - BABEL</h2>
+						<p >
+							Maintenant que Gulp est ajouter à notre projet, nous allons pouvoir l'utiliser pour lancer un autre outil qui va transformer notre code Es6 en code Es5... <br>
+							tout seul!
+						</p>
+						<img style="position:absolute; top:160px;right:50px;" height="210px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003515/babel-logo.png" alt="">
+						<p><b>Il s'appel Babel </b></p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install --save-dev gulp-babel <br>
+								$ npm install --save-dev babel-preset-es2015 <br>
+								$ npm install --save-dev babelify <br>
+								$ npm install --save-dev vinyl-transform vinyl-source-stream
+							</code>
+						</p>
+						<br>
+						<p>
+							<a href="https://babeljs.io">https://babeljs.io</a>
+						</p>
+					</section>
+
+					<section class="text-left">
+						<h2>UTILISER GULP AVEC SON PROJET - BABEL</h2>
+						<br>
+						<p>
+							Il faut ensuite, comme pour Gulp, importer Babel dans notre fichier de configuration (gulpfile.js) pour pouvoir utiliser cet outil. <br><br>
+							Ajouter ces lignes au fichier gulpfile.js :
+						</p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								var babel = require('gulp-babel'); <br>
+								var babelify = require('babelify'); <br>
+								var transform = require('vinyl-transform'); <br>
+								var source = require('vinyl-source-stream');
+							</code>
+						</p>
+						<br>
+						<p>
+							Babelify est un plugin de Babel qui permet de convertir Es6 en Es5! <br>
+							C'est pour utiliser entre autre ce plugin que nous faisons tous cela...
+						</p>
+					</section>
+
+					<section class="text-left">
+						<h2>UTILISER GULP AVEC SON PROJET - BROWSERIFY</h2>
+						<br>
+						<img style="position:absolute; top:330px;right:50px;" height="210px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3011982/Browserify.svg.png" alt="">
+						<p >
+							Il nous faut aussi un outil qui nous permet notamment d'utiliser la syntaxe require() de CommonJS dans le navigateur
+						</p>
+						<p><b>Il s'appel browserify</b></p>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install --save-dev browserify <br>
+							</code>
+						</p>
+						<br>
+						<p>
+							Ajouter cette lignes au fichier gulpfile.js : <br><br>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								var browserify = require('browserify');
+							</code>
+						</p>
+						<br>
+						<p>
+							<a href="http://browserify.org">http://browserify.org</a>
+						</p>
+					</section>
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<h2>TP</h2>
+						<p class="text-left">Step 6</p>
+						<ul>
+							<li>installer Gulp en global sur votre machine </li>
+							<li>ajouter Gulp comme dépendence à votre projet</li>
+							<li>ajouter également Babel + Babelify + Browserify + Vinyl-Transform + vinyl-source-stream</li>
+							<li>créer fichier de config pour Gulp</li>
+							<li>(créer fichier .gitignore et y ajouter le repertoire 'node_modules' si vous utilisez Git)</li>
+						</ul>
+						<br>
+						<p>
+							<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+						</p>
+					</section>
+
+					<section class="text-left">
+						<h2>UTILISER GULP AVEC SON PROJET</h2>
+						<h3>CRÉER UN TÂCHE GULP</h3>
+						<br>
+						<p>Il est maintenant temps de créer notre 1ère tâche Gulp.</p>
+
+						<p>
+							Son nom: 'build-js' <br>
+							Elle devra s'occuper:
+						</p>
+						<ul>
+							<li>trouver tous les fichiers JS Es6 de notre projet</li>
+							<li>lire le contenu de ses fichiers</li>
+							<li>convertir tout le code en Es5</li>
+							<li>faire qu'un seul fichier avec tout le code de l'application</li>
+							<li>créer un répertoire de développement avec arboresance</li>
+							<li>y mettre le fichier JS</li>
+						</ul>
+						<p>Voici comment elle se présente: </p>
+					</section>
+
+					<section>
+						<h2>UTILISER GULP AVEC SON PROJET</h2>
+						<br>
+						<p class="text-left">
+							Ajouter cette lignes au fichier gulpfile.js : <br><br>
+						</p>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+	// importer les modules NPM
+  var gulp = require('gulp');
+  var babel = require('gulp-babel');
+  var babelify = require('babelify');
+  var browserify = require("browserify");
+  var transform = require('vinyl-transform');
+  var source = require('vinyl-source-stream');
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>UTILISER GULP AVEC SON PROJET</h2>
+						<br>
+						<p class="text-left">
+							Ajouter cette lignes au fichier gulpfile.js : <br><br>
+						</p>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// importer les modules NPM
+var gulp = require('gulp');
+var babel = require('gulp-babel');
+var babelify = require('babelify');
+var browserify = require("browserify");
+var transform = require('vinyl-transform');
+var source = require('vinyl-source-stream');
+
+// Config of project folders
+var config = {
+  desDir: './dist' /* répértoire de destination (prod) */
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>UTILISER GULP AVEC SON PROJET</h2>
+						<br>
+						<p class="text-left">
+							Ajouter cette lignes au fichier gulpfile.js : <br><br>
+						</p>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// importer les modules NPM
+var gulp = require('gulp');
+var babel = require('gulp-babel');
+var babelify = require('babelify');
+var browserify = require("browserify");
+var transform = require('vinyl-transform');
+var source = require('vinyl-source-stream');
+
+// Config of project folders
+var config = {
+  desDir: './dist' /* répértoire de destination (prod) */
+}
+// Task to build JS files
+gulp.task("build-js", function(){
+  // task instruction...
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>UTILISER GULP AVEC SON PROJET</h2>
+						<br>
+						<p class="text-left">
+							Ajouter cette lignes au fichier gulpfile.js : <br><br>
+						</p>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// importer les modules NPM
+var gulp = require('gulp');
+var babel = require('gulp-babel');
+var babelify = require('babelify');
+var browserify = require("browserify");
+var transform = require('vinyl-transform');
+var source = require('vinyl-source-stream');
+
+// Config of project folders
+var config = {
+  desDir: './dist' /* répértoire de destination (prod) */
+}
+// Task to build JS files
+gulp.task("build-js", function(){
+ return browserify("dev/app/app.js",{
+    debug: true
+  })
+  .transform(babelify.configure({
+    presets : ["es2015"]
+  }))
+  .bundle()
+  .pipe(source("bundle.js"))
+  .pipe(gulp.dest(config.desDir + '/js'));
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section class="section-js" data-background-color="#222">
+					<h2>TP</h2>
+					<p class="text-left">Step 7</p>
+					<ul>
+						<li>Créer un tâche pour build les fichiers JS Es6</li>
+						<li>modifier l'url du fichier JS de l'application dans le fichier index.html</li>
+						<li>ajouter également Babel + Babelify + Browserify + Vinyl-Transform + vinyl-source-stream</li>
+						<li>tester l'application</li>
+					</ul>
+					<br>
+					<p>
+						<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+					</p>
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<p>
+							<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003375/nodejs-logo.png" alt="">
+
+							<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003369/gulp-2x.png" alt="">
+						</p>
+						<br>
+						<h3>Jour 4-5</h3>
+						<h2>ES6 DEVELOPPEMENT  & PRODUCTION WORKFLOW</h2>
+					</section>
+
+					<section data-background-color="#222">
+						<h2>ALLER PLUS LOIN AVEC GULP</h2>
+						<br>
+						<p>
+							Vous avez vu comme Gulp peut être puissant.
+							<br>Mais ce n'est encore rien!!!
+						</p>
+						<p>
+							On peut aller beaucoup plus loin que cela...
+							<br>Accrochez-vous, c'est parti!
+						</p>
+					</section>
+
+					<section>
+						<h2>GULP - GESTION DES FICHIERS HTML</h2>
+						<br>
+						<p>
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install gulp-remove-html-comments --save-dev
+							</code>
+						</p>
+						<br>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// gulpfile.js
+
+var removeHtmlComments  = require('gulp-remove-html-comments');
+
+gulp.task("copy-html", function(){
+  return gulp.src(['./dev/**/*.html'])
+  .pipe(rmHtmlComments())
+  .pipe(gulp.dest(config.desDir))
+});
+						</code></pre>
+						<br>
+						<p>
+							Maintenant utilisez l'url <b>'dist/index.html'</b> pour afficher l'application
+						</p>
+					</section>
+				</section>
+
+				<section class="section-js" data-background-color="#222">
+					<h2>TP</h2>
+					<p >Step 8</p>
+					<ul>
+						<li>Créer un tâche pour copier les fichiers HTML <br>dans le répértoire de production: 'dist'</li>
+						<li>modifier l'url du fichier JS de l'application <br>dans le fichier index.html</li>
+						<li>tester l'application</li>
+					</ul>
+					<br>
+					<p>
+						<a href="https://github.com/FazioNico/cours-es6">https://github.com/FazioNico/cours-es6</a>
+					</p>
+				</section>
+
+				<section class="section-js">
+					<section data-background-color="#222">
+						<h2>GULP - LIVE RELOAD</h2>
+					</section>
+
+					<section>
+						<h2 class="text-left">GULP - LIVE RELOAD</h2>
+						<img style="position:absolute; top:10px;right:50px;" height="210px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3012339/browsersync.png" alt="">
+						<p class="text-left">
+							<code class="javascript" data-trim style="background-color: #ccc;padding:10px;">
+								$ npm install --save-dev browser-sync
+							</code>
+						</p>
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// gulpfile.js
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+// Task to run local server
+gulp.task("startServer",  function() {
+  browserSync.init({
+    server: {
+        baseDir: config.desDir
+    },
+    notify: true
+  });
+});
+
+// Task to watch wich file is changing
+// and load the right task
+gulp.task('watch', function() {
+  // watch js file changes
+  gulp.watch('./dev/app/**/*.js', ['build-js']); 
+  // watch all html template file changes
+  gulp.watch('./dev/**/*.html', ['copy-html']); 
+});
+						</code></pre>
+
+						<pre><code class="text" data-trim style="background-color: #ccc;padding:10px;">
+// add this in task you want for reload
+// in the end of the task
+.pipe(reload({stream:true}))
+						</code></pre>
+						<p>
+							<a href="https://www.browsersync.io">https://www.browsersync.io</a>
+						</p>
+					</section>
+				</section>
+
+				<section class="section-js" data-background-color="#222">
+					<img height="310px" data-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+					<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003375/nodejs-logo.png" alt="">
+					<img height="310px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003369/gulp-2x.png" alt="">
+					<br>
+					<img height="185px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3011982/Browserify.svg.png" alt="">
+					<img height="185px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3003515/babel-logo.png" alt="">
+					<img height="185px" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/559385/images/3012339/browsersync.png" alt="">
+					<br>
+					<h2>STACK FRONT-END</h2>
+				</section>
+				<section class="section-js" data-background-color="#222">
+					<h3>
+						On peut aller encore plus loin avec Gulp... <br>
+					</h3>
+					<br>
+					<p>
+						Gestion des dépendances Bower, des fichier sass, css, images, etc...
+					</p>
+					<p>
+						Je vous invite à regarder ce fichier qui contient quelques tasks qui vous seront utiles:
+					</p>
+					<p>
+						<a href="https://github.com/FazioNico/simple-es6-front-ent-stack/blob/master/gulpfile.js">
+							https://github.com/FazioNico/simple-es6-front-ent-stack/blob/master/gulpfile.js
+						</a>
+					</p>
+				</section>
+				<section class="section-js" data-background-color="#222">
+					<h2>DES QUESTIONS? </h2>
+				</section>
+				<section class="section-js" data-background-color="#222">
+					<h1>FIN ;-)</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
