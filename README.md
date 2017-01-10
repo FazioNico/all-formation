@@ -12,6 +12,7 @@ Nomades Advenced Technologies.
 - Formation ES6 :  [Slides](https://fazionico.github.io/all-formation/slides-formation-es6.html#/) | [PDF](https://fazionico.github.io/all-formation/pdf/pdf-formation-es6.pdf) | [TP ES6](https://github.com/FazioNico/cours-es6)
 - Formation Typescript :  [Slides](https://fazionico.github.io/all-formation/slides-introduction-typescript.html) | [TP Typescript](https://github.com/FazioNico/simple-ts-front-end-stack)
 - Formation Ionic 2 : [Build Application Workflow](https://github.com/FazioNico/elevator-app)
+- Formation MEAN Stack : [MEAN/MEIN Stack TypeScript](https://github.com/FazioNico/ionic-mean-typescript)
 
 ## Utilisation
 - Press `space` pour faire défiller les slides
