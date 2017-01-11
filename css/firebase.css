@@ -1,0 +1,25 @@
+
+.section-fb h1, .section-fb h2, .section-fb h3, .section-fb h4 {
+  color: #039be5!important;
+}
+*.green {
+  background: green;
+  color: #fff;
+}
+*.blue {
+  background: blue;
+  color: #fff;
+}
+*.red {
+  background: red;
+  color: #fff;
+}
+*.purple {
+  background: purple;
+  color: #fff;
+}
+.nosqlItem {
+  width: auto;
+  max-width: 350px;
+  float:left;
+}
