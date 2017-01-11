@@ -7,7 +7,7 @@ Nomades Advenced Technologies.
 ## Liste des support de cours
 
 - Formation JS Debug : [Slides](https://fazionico.github.io/all-formation/slides-debug-outil-dev.html#/) | [TP JS Debug](https://fazionico.github.io/all-formation/tp/demo-devtools/tp-debug-outil-dev.html)
-- Formation Firebase - Basic :  [Slides](https://fazionico.github.io/all-formation/slides-firebase-basic.html#/)
+- Formation Firebase - Basic :  [Slides](https://fazionico.github.io/all-formation/slides-firebase-basic.html#/) | [PDF](https://fazionico.github.io/all-formation/pdf-firebase-basic.pdf)
 - Formation Git :  [Slides](https://fazionico.github.io/all-formation/slides-git-formation.html#/)
 - Formation ES6 :  [Slides](https://fazionico.github.io/all-formation/slides-formation-es6.html#/) | [PDF](https://fazionico.github.io/all-formation/pdf/pdf-formation-es6.pdf) | [TP ES6](https://github.com/FazioNico/cours-es6)
 - Formation Typescript :  [Slides](https://fazionico.github.io/all-formation/slides-introduction-typescript.html) | [TP Typescript](https://github.com/FazioNico/simple-ts-front-end-stack)
