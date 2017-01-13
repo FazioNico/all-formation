@@ -13,7 +13,7 @@ h3, h4 {
   font-size:90%!important;
 }
 
-p,ul {
+p,ul,ol,code {
   /*margin:0px 0px 80px 0px!important;*/
   font-size:1.5rem!important;
 }
