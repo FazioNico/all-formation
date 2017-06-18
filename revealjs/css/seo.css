@@ -1,0 +1,17 @@
+/**
+ * @Author: Nicolas Fazio <webmaster-fazio>
+ * @Date:   16-06-2017
+ * @Email:  contact@nicolasfazio.ch
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 16-06-2017
+ */
+
+.section-bgw h1, .section-bgw h2, .section-bgw h3, .section-bgw h4 {
+  color: #4285f4!important;
+}
+.section-bgb h1, .section-bgb h2, .section-bgb h3, .section-bgb h4 {
+  color: #fff!important;
+}
+.section-gulp h1, .section-gulp h2, .section-gulp h3, .section-gulp h4 {
+  color: #eb4a4b!important;
+}
