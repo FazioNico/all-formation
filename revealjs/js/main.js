@@ -36,7 +36,7 @@ var listeLink = [
   'slides-introduction-typescript.html',
 
 
-  'slides-formation-seo.html',
+  'slides-formation-seo-s1.html',
   'pdf/pdf-formation-seo.pdf'
 ]
 
