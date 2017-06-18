@@ -7,7 +7,7 @@ Nomades Advenced Technologies.
 ## Liste des support de cours
 
 <b>Web Programer :</b>
-- Formation SEO : [Slide](https://fazionico.github.io/all-formation/auth.html#slides-formation-seo-s1.html) | [PDF](https://github.com/FazioNico/all-formation/blob/dev/revealjs/pdf/pdf-formation-seo.pdf)
+- Formation SEO : [Slide](https://fazionico.github.io/all-formation/auth.html#slides-formation-seo-s1.html) | [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-formation-seo.pdf)
 - Formation JS Debug : [Slides](https://fazionico.github.io/all-formation/auth.html#slides-debug-outil-dev.html) |  [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-debug-outil-dev.pdf) | [TP JS Debug](https://fazionico.github.io/all-formation/tp/demo-devtools/tp-debug-outil-dev.html)
 - Formation Firebase - Basic :  [Slides](https://fazionico.github.io/all-formation/auth.html#slides-firebase-basic.html) | [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-firebase-basic.pdf)
 - Formation Firebase - Medium : *soon*
