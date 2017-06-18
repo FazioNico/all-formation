@@ -1,5 +1,7 @@
 <img height="60px" src="http://nomades.ch/wp-content/themes/theme_nomades/images/logo-nomades.png">
+
 #  All Formation Nomades Advenced
+
 Liste des formations avec support de cours et TP pour Nomades Advenced Technologies à Genève.
 
 Nomades Advenced Technologies.
