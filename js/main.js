@@ -1,3 +1,11 @@
+/**
+ * @Author: Nicolas Fazio <webmaster-fazio>
+ * @Date:   19-06-2017
+ * @Email:  contact@nicolasfazio.ch
+ * @Last modified by:   webmaster-fazio
+ * @Last modified time: 19-06-2017
+ */
+
 /*
  Define variable
 */
@@ -25,7 +33,11 @@ var listeLink = [
   'slides-formation-es6.html',
   'pdf/pdf-formation-es6.pdf',
 
-  'slides-introduction-typescript.html'
+  'slides-introduction-typescript.html',
+
+
+  'slides-formation-seo.html',
+  'pdf/pdf-formation-seo.pdf'
 ]
 
 /*
