@@ -8,7 +8,7 @@ Nomades Advenced Technologies.
 [Site web](http://nomades.ch/)
 ## Liste des support de cours
 
-<b>Web Masrketing :</b>
+<b>Web Marketing :</b>
 - Formation SEO : [Slide](https://fazionico.github.io/all-formation/auth.html#slides-formation-seo-s1.html) | [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-formation-seo.pdf) | [TP](https://fazionico.github.io/all-formation/tp/seo/index.html)
 
 <b>Web Programer :</b>
