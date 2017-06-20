@@ -659,6 +659,49 @@
 						<hr>
 						<h3>2.5: Définir une entête de page HTML5 optimisée pour le mobile sur chaque page</h3>
 					</section>
+					<section class="section-bgw">
+							<h2>2.5.a: La balise viewport </h2>
+							<p>
+								Depuis l'apparition de appareils mobils, la taille de la zone d'affichage d'un site web est amenée à changer en fonction du type de device sur lequel l'utilisateur consulte votre site.
+							</p>
+							<p>
+								Du coup, le format d'affichage standard (desktop) et trop large pour s'afficher correctement. <br>
+								On peut intervenir sur le style du site en créant une série de regles CSS spécialement concu pour cetrains type de format (smartphone, tablette...) ce qui va mettre en forme le site correctement, mais l'utilisateur à toujour la possibilité de zoomer dans votre site... ce qui peut être très dérangeant pour l'utilisateur si pour lire le texte de votre site est trop petit... ou le cadrage de la page saute si l'on selectionne un champe dans un formulaire...
+							</p>
+							<p>
+								Pour palier à ces genres de problèmes, il existe une balise qui permet de fixer le ratio de la page et d'empêcher le zoom. Ce qui ameliore l'experience de l'utilisateur en lui poposant une navigation similaire à une veritable application mobile.
+							</p>
+							<p>
+								<a href="https://developer.mozilla.org/fr/docs/Mozilla/Mobile/Balise_meta_viewport">Doc view-port</a>
+							</p>
+					</section>
+
+					<section class="section-bgw">
+							<h2>2.5.b: Les balises  mobile-* </h2>
+							<p>
+								Il existe toutes unr multitude de balise uniquement pour le mobile. Elle permettent de renseigner divers information relative à votre sitre web: icone miniature pour mobile; couleur du theme Android; nom de "l'application", etc...
+							</p>
+							<p>
+								Configurer ces balise à la main est une chose fastidieuse. <br> Je vous donne une astuce:
+							</p>
+							<p>
+								<a href="https://realfavicongenerator.net">Real Favicon Generator</a>
+							</p>
+					</section>
+
+					<section class="section-bgw">
+							<h2>2.5.b: Les balises  mobile-* </h2>
+							<p>
+								Il existe toutes unr multitude de balise uniquement pour le mobile. Elle permettent de renseigner divers information relative à votre sitre web: icone miniature pour mobile; couleur du theme Android; nom de "l'application", etc...
+							</p>
+							<p>
+								Configurer ces balise à la main est une chose fastidieuse. <br> Je vous donne une astuce:
+							</p>
+							<p>
+								<a href="https://realfavicongenerator.net">Real Favicon Generator</a>
+							</p>
+					</section>
+
 				</section>
 
 				<section>
@@ -809,9 +852,78 @@ Disallow: /private/
 					<section class="section-bgb" data-background-color="#4285f4">
 					  <h2>3: Off-site | Outils, mesures d’audience, analyse</h2>
 						<hr>
-						<h3>3.1: Google Analytics</h3>
+						<h3>3.1: Google Analytics </h3>
+					</section>
+					<section class="section-bgw">
+						<h2>3.1.a installation et utilisation </h2>
+						<p>
+							Super facile, il sufit d'avoir un compte Google (mail, youtube, Google+ etc...) pour pouvoir accèder à Google Analytics. Il faut suivre les instruction lors du "pas à pas".
+						</p>
+						<p>
+							<a href="https://www.google.com/analytics/">Google Analytics</a>
+						</p>
 					</section>
 
+					<section class="section-bgw">
+						<h2>3.1.b comprendre les statistique</h2>
+						<p>
+							La c'est un peut plus compliquer. <br>
+							Je vais faire une demo avec un site perso alors prennez des notes...
+						</p>
+						<p>
+							<a href="https://www.google.com/analytics/">Google Analytics</a>
+						</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section class="section-bgb" data-background-color="#4285f4">
+					  <h2>4: Blog | Création d'un blog optimisé</h2>
+						<hr>
+						<h3>4.1: Wordpress </h3>
+					</section>
+					<section class="section-bgw">
+						<h2>4.1.a Installation WP</h2>
+						<p>
+							Rien de spécial à dire si ce n'est choisir la dernière version de WP et choisir un hébérgeur performant pour heberger le site/blog.
+						</p>
+					</section>
+					<section class="section-bgw">
+						<h2>4.1.b Choisir/Créer un thème</h2>
+						<p>
+							Le thème de votre blog être adapté au appareil mobile!! <br>
+							Perso je les conçoit à la main en m'aidant de framework CSS du type <a href="materializecss.com">Materialize.css</a> inspiré de Google Material Design pour le graphisme.<br>
+							Et <a href="http://underscores.me/">_s</a> pour les fichiers vides de WP.
+						</p>
+						<p>
+							Mais vous pouvez choisir d'un utiliser un existant qui vous plait. Il faudra alors verifier la semantique HTML du themplate et mettre à jours le code si celui-ci n'est pas correctement optimiser pour les moteurs de recherche.
+						</p>
+					</section>
+					<section class="section-bgw">
+						<h2>4.1.c Ajouter des plugin SEO</h2>
+						<p>
+							On vas pas réinventer la roue...
+						</p>
+						<p>
+							On install directement Yoast SEO depuis l'onglet "plugins" dans l'admin WP puis on vas suivre le guide d'optimisation: <a href="https://yoast.com/wordpress-seo">https://yoast.com/wordpress-seo</a>
+						</p>
+					</section>
+					<section class="section-bgw">
+						<h2>4.1.d Optimiser encore...</h2>
+						<p>
+							Suivez le guide...
+						</p>
+						<p>
+							<a href="https://developers.google.com/webmasters/mobile-sites/website-software/wordpress">Google Webmaster Wordpress</a>
+						</p>
+					</section>
+					<section class="section-bgw">
+						<h2>4.1.e Et encore...</h2>
+						<p>
+							<a href="https://github.com/FazioNico/wp-theme-nomades-projets/blob/master/functions.php#L201">code à ajouter au fichier function.php (ligne 201 à 246)</a>
+						</p>
+					</section>
 				</section>
 			</div>
 
