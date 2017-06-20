@@ -56,15 +56,17 @@
         <h2 class="center">Services</h2>
         <!--   Icon Section   -->
         <div class="row">
-          <article class="col s12 m4">
+          <article class="col s12 m4" itemscope itemtype="http://schema.org/NewsArticle">
             <div class="icon-block">
               <header>
-                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                <h2 class="center brown-text" itemprop="headline"><i class="material-icons">flash_on</i></h2>
                 <p class="center">Speeds up development</p>
               </header>
-              <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              <p class="light" itemprop="description">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
               <p><a href="#!">Link</a></p>
             </div>
+            <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
+            <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>
           </article>
 
           <article class="col s12 m4">
@@ -132,11 +134,20 @@
   </main>
 
   <footer class="page-footer teal">
-    <section class="container">
+    <section class="container" itemscope itemtype="http://schema.org/LocalBusiness">
       <div class="row">
         <div class="col l6 s12">
-          <h1 class="white-text">Company Bio</h1>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h1 class="white-text" itemprop="name">Ateliers Nomades</h1>
+          <p class="grey-text text-lighten-4">
+            Les Ateliers nomades décernent quatre diplômes concernant le développement web et mobile. Ces formations intégrent le développement de projets concrets.          </p>
+          <p class="address grey-text text-lighten-4" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span class="streetAddress" itemprop="streetAddress">Rue des Acasias 24</span> <br>
+            <span class="postalCode" itemprop=postalCode>1227</span> <span class="addressLocality" itemprop="addressLocality">Carouge</span> <br>
+            Suisse
+          </p>
+          <p>
+            Tel: <a href="tel:000.000.00.00" itemprop="telephone" class="telephon">000.000.00.00</a>
+          </p>
 
 
         </div>
