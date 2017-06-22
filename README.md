@@ -9,7 +9,7 @@ Nomades Advenced Technologies.
 ## Liste des support de cours
 
 <b>Web Marketing :</b>
-- Formation SEO : [Slide](https://fazionico.github.io/all-formation/auth.html#slides-formation-seo-s1.html) | [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-formation-seo.pdf) | [TP](https://fazionico.github.io/all-formation/tp/seo/index.html)
+- Formation SEO : [Slide](https://fazionico.github.io/all-formation/auth.html#slides-formation-seo-s1.html) | [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-formation-seo.pdf) | [TP](https://fazionico.github.io/all-formation/tp/seo/index.html) | [TP WP](https://github.com/FazioNico/all-formation/tree/gh-pages/tp/wp/tp_wp_seo/wp-content/themes/tp_wp_seo)
 
 <b>Web Programer :</b>
 - Formation JS Debug : [Slides](https://fazionico.github.io/all-formation/auth.html#slides-debug-outil-dev.html) |  [PDF](https://fazionico.github.io/all-formation/auth.html#pdf/pdf-debug-outil-dev.pdf) | [TP JS Debug](https://fazionico.github.io/all-formation/tp/demo-devtools/tp-debug-outil-dev.html)
